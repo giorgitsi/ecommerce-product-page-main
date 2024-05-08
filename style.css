@@ -101,14 +101,16 @@ button{
     border-radius: 6px ;
     position: absolute;
     left: 50%;
-    bottom: -50px;
+    bottom: -110px;
     transform: translate(-50%, 50%);
     display: none;
+    min-height: 170px;
     
 }
 
 .cart-image-container{
     display: flex;
+    gap: 15px;
 }
 
 .cart-image-container img{
@@ -118,6 +120,15 @@ button{
 
 .cart-image-container .p-container{
     display: flex;
+    flex-direction: column;
+    gap: 7px;
+    color:hsl(219, 9%, 45%) ;
+    font-weight: 500;
+}
+
+.span-p-price{
+    color: black;
+    font-weight: 700;
 }
 
 .cart-btn{
@@ -150,10 +161,16 @@ button{
 }
 
 
-.cart-box p{
-
+.cart-p{
     border-bottom: 1px solid rgba(0, 0, 0, 0.196);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    
+}
 
+.empty-cart-text{
+    text-align: center;
+    margin-top: 55px;
 }
 
 .cart-box .btn{
@@ -161,11 +178,18 @@ button{
     color: white;
     width: 100%;
     margin-top: 5px;
+    margin-top: 25px;
 }
 
 .cart-box-block{
     display: block;
 }
+
+.delete{
+    padding: 20px;
+}
+
+
 /* navbar end */
 
 
@@ -317,3 +341,7 @@ button{
 
 /* content end */
 
+
+.deletContent{
+    display: none;
+}

@@ -8,6 +8,7 @@ imgs.forEach(img => {
         const activeImg = document.querySelector(".img-active")
         activeImg.classList.remove("img-active")
 
+        
 
         img.classList.add("img-active")
 
@@ -17,6 +18,13 @@ imgs.forEach(img => {
     })
 
 });
+
+
+
+
+
+
+
 
 
 // ----------- plus minus logic - +  --------------
@@ -38,11 +46,36 @@ btnPlus.addEventListener("click", () => {
 
 
 // -------------------- cart logic -----------------------
+const delet = document.querySelector(".delete")
+const contentBox = document.querySelector(".content-box")
 const cartBox = document.querySelector(".cart-box")
 const cartBtn = document.querySelector(".cart-btn")
 
 cartBtn.addEventListener("click", () =>{
-
+    
     cartBox.classList.toggle("cart-box-block")
     
 })
+
+delet.addEventListener("click", function (){
+    contentBox.classList.add("deletContent")
+    const p = document.createElement("p")
+    p.textContent = "Your cart is empty."
+    p.classList.add("empty-cart-text")
+    cartBox.append(p)
+})
+
+
+
+
+const arr = [3, 2, 5, 6]
+console.log(arr[arr.length - 1])
+
+arr.forEach((num) => {
+    if (num%2===0){
+        console.log(num)
+    }
+});
+
+
+
